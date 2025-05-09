@@ -1,0 +1,126 @@
+/* Generali */
+body {
+  font-family: Garamond;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #DE8C81;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+img {
+  border: 7px solid #f4f4f4;
+  border-radius: 4px;
+  width: 150px;
+}
+
+h1,
+h2,
+h3{
+  color: black;
+}
+
+
+
+
+section {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);s
+}
+
+form {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  padding: 10px;
+  width: 50%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #E9EEF2;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.error {
+  background-color: #f44336;
+}
+
+button:hover {
+  background-color: #f2f2f2;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin: 40px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.navigation {
+  margin: 10px 0;
+  padding: 5px 5px;
+  text-align: center;
+  font-weight: bold;
+  
+}
+.navigation a {
+  margin: 5px;
+  padding: 5px;
+  color:black; 
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+  color: black;
+
+}

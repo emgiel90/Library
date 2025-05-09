@@ -1,0 +1,22 @@
+<!-- registrazione.html -->
+{% extends "layout.html" %} 
+{% block body %}
+
+<section>
+  <h2>Registrati</h2>
+
+<form action="register" method="post">
+  {{ form.hidden_tag() }} 
+  {{ form.username.label }} 
+  {{ form.username(size=20) }}
+
+  {{ form.email.label }} 
+  {{ form.email(size=20) }}
+
+  {{ form.password.label }} 
+  {{ form.password(size=20) }} 
+   <br /><br /> 
+  {{ form.submit() }} 
+  </form>
+</section>
+{% endblock %}

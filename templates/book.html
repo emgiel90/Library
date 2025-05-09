@@ -1,0 +1,46 @@
+{% extends "layout.html"%}
+{% block body%}
+
+<section>
+    
+    {% if books %}
+  
+      <!-- Questa tabella verrà riempita con il libro cercato -->
+      <table>
+        <caption>
+          <h2>Ecco il profilo del libro</h2>
+        </caption>
+        <thead>
+          <tr>
+            <th>Titolo</th>
+            <th>Autore</th>
+            <th>ISBN</th>
+            <th>Stato</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+  
+          {% for book in books %}
+  
+          <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.isbn }}</td>
+            <td>{{ book.status }}</td>
+            <td>
+                <form action="/book/home" method="POST">
+                    <button type="submit">Torna alla home</button>
+      
+                </form>
+              </td>
+          </tr>
+        {% endfor %}  
+        </tbody>
+        </table>
+    {% endif %}
+    
+
+</section>
+{% endblock%}
+

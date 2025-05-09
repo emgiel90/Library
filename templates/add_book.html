@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<!-- Sezione per aggiungere un nuovo libro -->
+ <section>
+    <h2>Aggiungi un nuovo libro</h2>
+
+    <!-- <form onsubmit="aggiungiLibro(); return false;"> -->
+    <form action="add" method="post">
+      {{ form.hidden_tag() }}
+      {{ form.title.label }} 
+      {{ form.title(size=20) }}
+
+      {{ form.author.label }} 
+      {{ form.author(size=20) }}
+
+      {{ form.isbn.label }} 
+      {{ form.isbn(size=20) }}
+      <br></br>
+      {{ form.submit() }}
+      <input type="reset" value="Reset" >
+    </form>
+  </section>
+  {% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section>
+    
+  {% if books %}
+
+    <!-- Questa tabella verrà riempita con i libri attualmente in biblioteca -->
+    <table>
+      <caption>
+        <h2>Biblioteca</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th>Titolo</th>
+          <th>Autore</th>
+          <th>ISBN</th>
+          <th>Stato</th>
+          <th>Action</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for book in books %}
+
+        <tr>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.isbn }}</td>
+          <td>{{ book.status }}</td>
+          <td>
+            <form action="book/{{ book.isbn }}" method="POST">
+              <button type="submit">Vai al profilo del libro</button></form>
+          </td>
+          <td>
+
+
+            <form action="removeBook/{{ book.isbn }}" method="POST">
+            <button type="submit">Elimina questo libro</button></form>
+          </td>
+        </tr>
+      {% endfor %}  
+      </tbody>
+     {% else %} 
+     <p>Nessun libro disponibile</p>
+    </table>
+  {% endif %}
+  
+</section>
+{% endblock %}
